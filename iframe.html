@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+</head>
+
+<body>
+<table width="100%" border="1" cellpadding="10">
+<tr>
+<td colspan="2" valign="top" name="stat" id="stat"> 
+                          <iframe name="statiframe" id="statiframe" frameborder="0" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="auto" src="aa.html"  allowtransparency="true" onload="document.all.stat.style.height=document.statiframe.document.body.scrollHeight;void(0);"> 
+                          </iframe> 
+					  </td>
+                      </tr>
+                      </table>
+
+
+<script type="text/javascript">
+   // document.getElementById('statiframe').onload = function() {
+//document.all.stat.style.height=document.statiframe.document.body.scrollHeight;
+
+function SetCwinHeight() {
+    var iframeid = document.getElementById("statiframe"); //iframe id  
+    if (document.getElementById) {
+        if (iframeid && !window.opera) {
+            if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
+                iframeid.height = iframeid.contentDocument.body.offsetHeight;
+            } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
+                iframeid.height = iframeid.Document.body.scrollHeight;
+            }
+        }
+    }
+
+alert("hi");
+//document.all.stat.style.height="1000px"+"3000px";
+//document.getElementById('stat').style.height="2000px";
+
+
+
+    }
+</script>
+</body>
+</html>
